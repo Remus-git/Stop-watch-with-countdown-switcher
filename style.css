@@ -45,6 +45,9 @@
     font-weight: 700;
     font-size: 2rem;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .timeContainer{
     width: auto;
@@ -126,8 +129,67 @@ hr{
     background-color: #51547a;
     color: white;
 }
+.checkBox{
+    display: flex;
+    justify-content: center;
+}
+.checkBox label{
+    cursor: pointer;
+    width: 70px;
+    height: 35px;
+}
+.checkBox input{
+    display: none;
+}
+#sliderId:checked ~ .slider{
+    background-color: hsl(237, 18%, 59%);
+    transition: 1.5s;
+}
 
+.slider{
+    margin-left: 20px;
+    width: 70px;
+    height: 35px;
+    border-radius: 2rem;
+    background-color: #343650;
+    position: relative;
+}
+.slider::after{
+    margin-left: 3px;
+    margin-bottom: 3px;
+    margin-top: 3px;
+    left: 0;
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-color: hsl(237, 18%, 59%);
+    position: absolute;
+    border-radius: 50%;
+    transition: 1s;
+}
+#sliderId:checked ~ .slider::after{
+    left: 35px;
+    transition: 1.5s;
+    background-color: #343650;
+}
 @media(max-width:540px){
+    .headline{
+        font-size: 1.8rem;
+    }
+    .slider{
+        width: 50px;
+        height: 25px;
+    }
+    .slider::after{
+        
+        width: 20px;
+        height: 20px;
+    }
+    #sliderId:checked ~ .slider::after{
+        left: 25px;
+        transition: 1.5s;
+        background-color: #343650;
+    }
     .labelContainer{
         width: 50%;
         text-align: center;
@@ -165,6 +227,9 @@ hr{
     }
 }
 @media(max-width:400px){
+    .headline{
+        font-size: 1.5rem;
+    }
     .buttonContainer{
         width: 80%;
     }
@@ -178,5 +243,16 @@ hr{
     }
     .timeContainer{
         width: 100%;
+    }
+}
+@media(max-height:700px){
+    body{
+        height: 100%;
+    }
+    .mainContainer{
+        height: 100%;
+    }
+    .headline{
+        margin-top: 2rem;
     }
 }
