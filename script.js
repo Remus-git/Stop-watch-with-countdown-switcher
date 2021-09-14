@@ -12,7 +12,7 @@ let hourProp = 0;
 let dayProp = 0;
 let a = () =>{
     secProp += 1;
-    if(secProp== 1000){
+    if(secProp== 50){
         secProp = 0;
         minProp += 1;
     }
@@ -54,7 +54,7 @@ let a = () =>{
 let interval;
 start.addEventListener("click",function(){
     clearInterval(interval)
-    interval = setInterval(a,0)}
+    interval = setInterval(a,20)}
 ) 
 pause.addEventListener("click",function(){
     clearInterval(interval)
