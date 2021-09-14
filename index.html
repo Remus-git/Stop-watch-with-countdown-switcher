@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
+  <title>Countdown Timer</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+  <div class="mainContainer">
+    <div class="backgroundImage">
+      <img src="/images/bg-stars.svg" alt="star svg" id="starsPattern">
+      <img src="/images/pattern-hills.svg" alt="hill pattern" id="hillPattern">
+      <div class="subContainer">
+        <div class="headline">
+          Stop Watch
+        </div>  
+        <div class="timeContainer">
+          <div class="displayBlock">
+            <div class="day">
+              00
+            </div>
+            <hr>
+          </div>
+          <div class="displayBlock">
+            <div class="hour">
+              00
+            </div>
+            <hr>
+          </div> 
+          <div class="displayBlock">
+            <div class="minute">
+              00
+            </div>  
+            <hr>
+          </div>
+          <div class="displayBlock">
+            <div class="second">
+              00
+            </div>
+            <hr>
+          </div>    
+        </div>
+        <div class="labelContainer">
+          <span>HOURS</span>
+          <span>MINUTES</span>
+          <span>SECONDS</span>
+          <span>MILLISECONDS</span>
+        </div>
+        <div class="buttonContainer">
+          <div class="resetBtn" id="startBtn">START</div>
+          <div class="resetBtn" id="pauseBtn">PAUSE</div>
+          <div class="resetBtn" id="resetBtn">RESET</div>
+        </div>  
+      </div>
+      <div class="socialIconContainer">
+        <img src="/images/icon-facebook.svg" alt="">
+        <img src="/images/icon-pinterest.svg" alt="">
+        <img src="/images/icon-instagram.svg" alt="">
+      </div>
+    </div>   
+  </div>
+  <script src="/script.js"></script>
+</body>
+</html>
